@@ -4,3 +4,7 @@ body {
 .main img {
     width: 100%;
 }
+iframe,embed {
+    width: 100% !important;
+    height: 800px !important;
+}
