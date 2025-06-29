@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+</head>
+<body>
+<canvas id="pdfCanvas"></canvas>
+<embed src="file/01.pdf" type="" width="100%" height="100%">
+<!--<iframe src="file/01.pdf"  width="100%" height="100%">-->
+<script>
+  pdfjsLib.getDocument('file/01.pdf').promise.then(function(pdf) {
+    pdf.getPage(1).then(function(page) {
+      var scale = 1.5;
+      var viewport = page.getViewport({scale: scale});
+      var canvas = document.getElementById('pdfCanvas');
+      var context = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      var renderContext = {
+        canvasContext: context,
+        viewport: viewport
+      };
+      page.render(renderContext);
+    });
+  });
+</script>
+</body>
+</html>
