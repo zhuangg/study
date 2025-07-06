@@ -5,6 +5,12 @@ body {
     width: 100%;
     vertical-align: middle;
 }
+.main audio {
+    position: absolute;
+    left: 190px;
+    height: 24px;
+    width: 400px;
+}
 iframe,embed {
     width: 100% !important;
     height: 210px !important;
