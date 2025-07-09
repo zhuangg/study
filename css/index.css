@@ -6,6 +6,7 @@ body {
     vertical-align: middle;
 }
 .main audio {
+    vertical-align: middle;
     /*position: absolute;*/
     /*left: 190px;*/
     /*height: 24px;*/
